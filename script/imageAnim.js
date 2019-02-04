@@ -63,8 +63,7 @@
 	});
 
 
-
-	function resetPuzzlePieces() {
+		function resetPuzzlePieces() {
 		//change the current puzzle, regenerate the pieces
 		//debugger;
 		//clean out the puzzle pieces div
