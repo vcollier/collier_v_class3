@@ -58,6 +58,11 @@
 
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
+
+			correct.addEventListener("drop", function(e) {
+				e.preventDefault();
+				console.log('correct!');
+			})
 		});
 
 	});

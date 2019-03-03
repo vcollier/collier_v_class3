@@ -71,6 +71,11 @@ body {
 	position: absolute;
 }
 
+.target
+{
+	float: left; 
+}
+
 
 
 header {
