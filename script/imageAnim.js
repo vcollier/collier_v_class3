@@ -59,7 +59,7 @@
 			console.log('you dropped somethin on me');
 
 			if (zone.children.length !== 0) {
-			console.log(`there is a picture in zone already`);
+			console.log(`there have picture in zone area`);
 			return false;
 			}
 
