@@ -9,12 +9,14 @@
 	// get a reference to the drag side
 	let piecesBoard = document.querySelector(".puzzle-pieces");
 	let puzzleBoard = document.querySelector(".puzzle-board");
+	let puzzleImage = document.querySelector(".puzzle-image");
 
 	// get a reference to the buttons at the bottom so we can change the puzzle
 	let puzzleSelectors = document.querySelectorAll("#buttonHolder img");
 
 	// get a reference to the drop areas
 	let dropZones = document.querySelectorAll('.drop-zone');
+	let topLeft = document.querySelector(".tl");
 
 	// functions go in the middle
 	function createPuzzlePieces(pictureIndex) {
@@ -64,25 +66,35 @@
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
 
-			})
 		});
 
+
 	});
-
-
+		
 		function resetPuzzlePieces() {
 		//change the current puzzle, regenerate the pieces
 		//debugger;
 		//clean out the puzzle pieces div
 		piecesBoard.innerHTML = "";
 
+		//resets the puzzle board
+		document.getElementById('reset0').innerHTML = "";
+		document.getElementById('reset1').innerHTML = "";
+		document.getElementById('reset2').innerHTML = "";
+		document.getElementById('reset3').innerHTML = "";
+
+
 		// generate new pieces
 		createPuzzlePieces(this.dataset.puzzleref);
+
+		
+
 	}
 
 	// event handling goes here
 	puzzleSelectors.forEach(button => button.addEventListener("click", resetPuzzlePieces));
 
+	
 	// call this function to set up / generate the pieces on load
 	createPuzzlePieces(0);
 
