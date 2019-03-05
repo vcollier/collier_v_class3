@@ -16,6 +16,7 @@
 
 	// get a reference to the drop areas
 	let dropZones = document.querySelectorAll('.drop-zone');
+	let topLeft = document.querySelector(".tl");
 
 	// functions go in the middle
 	function createPuzzlePieces(pictureIndex) {
@@ -57,14 +58,19 @@
 			e.preventDefault();
 			console.log('you dropped somethin on me');
 
+			if (zone.children.length !== 0) {
+			console.log(`there is a picture in zone already`);
+			return false;
+			}
+
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
 
 		});
 
+
 	});
-
-
+		
 		function resetPuzzlePieces() {
 		//change the current puzzle, regenerate the pieces
 		//debugger;
@@ -88,7 +94,7 @@
 	// event handling goes here
 	puzzleSelectors.forEach(button => button.addEventListener("click", resetPuzzlePieces));
 
-
+	
 	// call this function to set up / generate the pieces on load
 	createPuzzlePieces(0);
 
