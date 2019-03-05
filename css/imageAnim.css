@@ -16,6 +16,10 @@ body {
 	text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f103cf9b07d459c109f34c030666e5951a443037
 .puzzle-pieces, .puzzle-board {
 	margin-top: 40px;
 	height: 400px;
@@ -52,12 +56,39 @@ body {
 
 .drop-zone {
 	width: 49.5%;
+<<<<<<< HEAD
   height: 49.5%;
   border: thin dashed white;
   float: left;
 	position: relative;
 }
 
+=======
+  	height: 49.5%;
+  	border: thin dashed white;
+  	float: left;
+	position: relative;
+}
+
+.tl, .bl { text-align: right; }
+.tr img { bottom: 0; }
+.tl img { bottom: 0; right: 0; }
+.bl img { right: 0; }
+
+.drop-zone img {
+	width: auto !important;
+	padding: 0 !important;
+	cursor: default;
+	position: absolute;
+}
+
+.target
+{
+	float: left; 
+}
+
+
+>>>>>>> f103cf9b07d459c109f34c030666e5951a443037
 
 header {
 	position: relative;
