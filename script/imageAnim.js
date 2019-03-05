@@ -56,12 +56,14 @@
 			e.preventDefault();
 			console.log('you dropped somethin on me');
 
+			if (zone.children.length !== 0) {
+			console.log(`there have picture in zone area`);
+			return false;
+			}
+
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
 
-			correct.addEventListener("drop", function(e) {
-				e.preventDefault();
-				console.log('correct!');
 			})
 		});
 
